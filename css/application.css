@@ -162,7 +162,7 @@ header {
   position: relative;
   width: 100%;
   min-height: auto;
-  overflow-y: auto;
+  /* overflow-y: hidden; */
   background-attachment: fixed;
   background-clip: border-box, border-box;
   background-color: rgba(0, 0, 0, 0);
