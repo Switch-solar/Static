@@ -1,27 +1,34 @@
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
+
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
 }
 
 a {
-  color: #f58220;
+  color: #15549a;
 }
 
 a:hover {
-  color: #ea6981;
+  color: #3e5a7a;
   text-decoration: none;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: "Nunito", sans-serif;
 }
 
 /*--------------------------------------------------------------
 # Back to top button
 --------------------------------------------------------------*/
+
 .back-to-top {
   position: fixed;
   display: none;
@@ -39,7 +46,7 @@ h1, h2, h3, h4, h5, h6 {
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background: #f58220;
+  background: #15549a;
   color: #fff;
   transition: all 0.4s;
 }
@@ -51,6 +58,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+
 #header {
   transition: all 0.5s;
   z-index: 997;
@@ -75,13 +83,15 @@ h1, h2, h3, h4, h5, h6 {
   max-height: 40px;
 }
 
-#header.header-scrolled, #header.header-inner-pages {
-  background: #fff;
+#header.header-scrolled,
+#header.header-inner-pages {
+  background: #15549a;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   padding: 12px 0;
 }
 
-#header.header-scrolled .logo a, #header.header-inner-pages .logo a {
+#header.header-scrolled .logo a,
+#header.header-inner-pages .logo a {
   color: #493c3e;
 }
 
@@ -94,7 +104,9 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
+
 /* Desktop Navigation */
+
 .nav-menu ul {
   margin: 0;
   padding: 0;
@@ -129,13 +141,15 @@ h1, h2, h3, h4, h5, h6 {
   height: 2px;
   bottom: -6px;
   left: 0;
-  background-color: #f58220;
+  background-color: #fff;
   visibility: hidden;
   transform: scaleX(0);
   transition: all 0.3s ease-in-out 0s;
 }
 
-.nav-menu a:hover:before, .nav-menu li:hover > a:before, .nav-menu .active > a:before {
+.nav-menu a:hover:before,
+.nav-menu li:hover > a:before,
+.nav-menu .active-nav > a:before {
   visibility: visible;
   transform: scaleX(1);
 }
@@ -172,8 +186,10 @@ h1, h2, h3, h4, h5, h6 {
   color: #493c3e;
 }
 
-.nav-menu .drop-down ul a:hover, .nav-menu .drop-down ul .active > a, .nav-menu .drop-down ul li:hover > a {
-  color: #f58220;
+.nav-menu .drop-down ul a:hover,
+.nav-menu .drop-down ul .active-nav > a,
+.nav-menu .drop-down ul li:hover > a {
+  color: #15549a;
 }
 
 .nav-menu .drop-down > a:after {
@@ -202,8 +218,9 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
 }
 
-.header-scrolled .nav-menu > ul > li > a, .header-inner-pages .nav-menu > ul > li > a {
-  color: #493c3e;
+.header-scrolled .nav-menu > ul > li > a,
+.header-inner-pages .nav-menu > ul > li > a {
+  color: #fff;
 }
 
 @media (max-width: 1366px) {
@@ -219,6 +236,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Mobile Navigation */
+
 .mobile-nav-toggle {
   position: fixed;
   right: 15px;
@@ -235,7 +253,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .mobile-nav-toggle i {
-  color: #f58220;
+  color: #fff;
 }
 
 .mobile-nav {
@@ -246,7 +264,7 @@ h1, h2, h3, h4, h5, h6 {
   left: 15px;
   z-index: 9999;
   overflow-y: auto;
-  background: #ebe0e0;
+  background: #fff;
   transition: ease-in-out 0.2s;
   opacity: 0;
   visibility: hidden;
@@ -269,8 +287,10 @@ h1, h2, h3, h4, h5, h6 {
   outline: none;
 }
 
-.mobile-nav a:hover, .mobile-nav .active > a, .mobile-nav li:hover > a {
-  color: #f58220;
+.mobile-nav a:hover,
+.mobile-nav .active-nav > a,
+.mobile-nav li:hover > a {
+  color: #15549a;
   text-decoration: none;
 }
 
@@ -281,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
   right: 15px;
 }
 
-.mobile-nav .active.drop-down > a:after {
+.mobile-nav .active-nav.drop-down > a:after {
   content: "\f00d";
 }
 
@@ -327,10 +347,12 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
+
 #hero {
   width: 100%;
   height: 100vh;
-  background: url("https://images.pexels.com/photos/302769/pexels-photo-302769.jpeg?cs=srgb&dl=architecture-building-business-302769.jpg&fm=jpg") top center;
+  background: url("https://raw.githubusercontent.com/poweredbymagic/Media/master/gujarats-rooftop-solar-power-scheme-aims-to-cover-2-lakh-families.jpg")
+    top center;
   background-size: cover;
   position: relative;
 }
@@ -359,6 +381,10 @@ h1, h2, h3, h4, h5, h6 {
   padding: 0 15px;
 }
 
+#hero .links {
+    flex-direction: row;
+}
+
 #hero h3 {
   background: rgba(255, 255, 255, 0.1);
   color: #fff;
@@ -383,7 +409,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 24px;
 }
 
-#hero .btn-get-started {
+#hero .btn-get-started, #hero .btn-services {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -397,10 +423,22 @@ h1, h2, h3, h4, h5, h6 {
   color: #fff;
 }
 
-#hero .btn-get-started:hover {
-  background: #f58220;
-  border: 2px solid #f58220;
+#hero .btn-services {
+    border-radius: 0px;
+    background: #15549a;
 }
+
+#hero .btn-get-started:hover {
+  background: #15549a;
+  border: 2px solid #15549a;
+}
+
+#hero .btn-services:hover {
+ background: #19159a;
+  border: 2px solid #19159a;
+}
+
+
 
 @media (min-width: 1024px) {
   #hero {
@@ -432,6 +470,7 @@ h1, h2, h3, h4, h5, h6 {
 /*--------------------------------------------------------------
 # Sections General
 --------------------------------------------------------------*/
+
 section {
   padding: 60px 0;
 }
@@ -453,7 +492,7 @@ section {
   line-height: 1;
   margin: 0;
   background: #fdeff2;
-  color: #f58220;
+  color: #15549a;
   display: inline-block;
   text-transform: uppercase;
   border-radius: 50px;
@@ -466,7 +505,7 @@ section {
 }
 
 .section-title h3 span {
-  color: #f58220;
+  color: #15549a;
 }
 
 .section-title p {
@@ -483,6 +522,7 @@ section {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
 .about .content h3 {
   font-weight: 600;
   font-size: 26px;
@@ -507,7 +547,7 @@ section {
   left: 0;
   top: 2px;
   font-size: 20px;
-  color: #f58220;
+  color: #15549a;
   line-height: 1;
 }
 
@@ -525,22 +565,115 @@ section {
   border-radius: 50px;
   transition: 0.3s;
   line-height: 1;
-  color: #f58220;
+  color: #15549a;
   -webkit-animation-delay: 0.8s;
   animation-delay: 0.8s;
   margin-top: 6px;
-  border: 2px solid #f58220;
+  border: 2px solid #15549a;
 }
 
 .about .content .btn-learn-more:hover {
-  background: #f58220;
+  background: #15549a;
   color: #fff;
   text-decoration: none;
 }
 
 /*--------------------------------------------------------------
+# Problems
+--------------------------------------------------------------*/
+#problems {
+    padding-top:50px;
+}
+
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+.mySlides {
+  display: none;
+  height: 370px;
+  border: solid 1px black;
+  opacity: 100% !important;
+  overflow: hidden;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #222428;
+  font-weight: bold;
+  font-size: 30px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+}
+
+.next {
+  right: -50px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.prev {
+  left: -50px;
+  border-radius: 3px 3px 3px 3px;
+}
+
+.prev:hover,
+.next:hover {
+  color: #f2f2f2;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.text {
+  color: #f2f2f2;
+  font-size: 18px;
+  font-weight: bold !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background-color: #15549a;
+}
+
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+  background-color: #717171;
+}
+
+/* Problems Section
+--------------------------------*/
+
+/*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+
 .services {
   padding-bottom: 30px;
 }
@@ -558,7 +691,7 @@ section {
 }
 
 .services .icon-box::before {
-  content: '';
+  content: "";
   position: absolute;
   background: #fdeff2;
   right: 0;
@@ -570,7 +703,7 @@ section {
 }
 
 .services .icon-box:hover::before {
-  background: #f58220;
+  background: #15549a;
   top: 0;
   border-radius: 0px;
 }
@@ -582,7 +715,7 @@ section {
 .services .icon i {
   font-size: 48px;
   line-height: 1;
-  color: #f58220;
+  color: #15549a;
   transition: all 0.3s ease-in-out;
 }
 
@@ -602,7 +735,8 @@ section {
   margin-bottom: 0;
 }
 
-.services .icon-box:hover .title a, .services .icon-box:hover .description {
+.services .icon-box:hover .title a,
+.services .icon-box:hover .description {
   color: #fff;
 }
 
@@ -620,70 +754,195 @@ section {
   }
 }
 
+/* Social Impact Section
+--------------------------------*/
 
-
-/*--------------------------------------------------------------
-# F.A.Q
---------------------------------------------------------------*/
-.faq {
-  padding: 60px 0;
-  background: #faebd7;
+#impact {
+  background: linear-gradient(
+      rgba(255, 255, 255, 0.9),
+      rgba(255, 255, 255, 0.9)
+    ),
+    url("../img/social-impact-bg.jpg") fixed center center;
+  background-size: cover;
+  padding: 80px 0 60px 0;
 }
 
-.faq .faq-list {
-  padding: 0;
-  list-style: none;
-}
-
-.faq .faq-list li {
-  padding: 0 0 20px 25px;
-}
-
-.faq .faq-list a {
-  display: block;
-  position: relative;
-  font-family: #f58220;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.faq .faq-list i {
-  font-size: 18px;
-  position: absolute;
-  left: -25px;
-  top: 6px;
-}
-
-.faq .faq-list p {
+#impact .impact-item {
   margin-bottom: 20px;
-  font-size: 15px;
 }
 
-.faq .faq-list a.collapse {
-  color: #f58220;
+#impact .impact-icon {
+  float: left;
+  background: #15549a;
+  border-radius: 50%;
+  transition: 0.5s;
+  border: 1px solid #15549a;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 64px;
+  height: 64px;
 }
 
-.faq .faq-list a.collapsed {
-  color: #343a40;
+#impact .impact-icon i {
+  color: #fff;
+  font-size: 24px;
+  line-height: 0;
 }
 
-.faq .faq-list a.collapsed:hover {
-  color: #f58220;
+#impact .impact-item:hover .impact-icon {
+  background: #fff;
 }
 
-.faq .faq-list a.collapsed i::before {
-  content: "\f107 " !important;
+#impact .impact-item:hover .impact-icon i {
+  color: #15549a;
 }
 
-@media (min-width: 1280px) {
-  .faq .container {
-    padding: 0 120px;
-  }
+#impact .impact-title {
+  margin-left: 80px;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+
+#impact .impact-title a {
+  color: #111;
+}
+
+#impact .impact-description {
+  margin-left: 80px;
+  line-height: 24px;
+}
+
+/* Subscribe Section
+--------------------------------*/
+
+#subscribe {
+  background: url(https://raw.githubusercontent.com/poweredbymagic/Media/master/blackout-again.jpg)
+    fixed center center;
+  background-size: cover;
+  padding: 80px 0;
+}
+
+#subscribe .subscribe-title {
+  color: #fff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+#subscribe .subscribe-text {
+  color: #fff;
+}
+
+#subscribe .subscribe-btn-container {
+  text-align: center;
+  padding-top: 20px;
+}
+
+#subscribe .subscribe-btn {
+  font-family: "Raleway", sans-serif;
+  text-transform: uppercase;
+  font-weight: 500;
+  font-size: 16px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 2px;
+  transition: 0.5s;
+  margin: 10px;
+  border: 2px solid #fff;
+  color: #fff;
+}
+
+#subscribe .subscribe-btn:hover {
+  background: #15549a;
+  border: 2px solid #15549a;
+}
+
+/* Testimonials Section
+--------------------------------*/
+
+#testimonials {
+  background: #f6f6f6;
+  padding: 80px 0;
+}
+
+#testimonials .profile {
+  text-align: center;
+}
+
+#testimonials .profile .pic {
+  border-radius: 50%;
+  border: 6px solid #fff;
+  margin-bottom: 15px;
+  overflow: hidden;
+  height: 260px;
+  width: 260px;
+}
+
+#testimonials .profile .pic img {
+  max-width: 100%;
+}
+
+#testimonials .profile h4 {
+  font-weight: 700;
+  color: #15549a;
+  margin-bottom: 5px;
+}
+
+#testimonials .profile span {
+  color: #333333;
+}
+
+.title-title {
+  font-size: 32px;
+  color: #111;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+}
+
+.title-description {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.title-title-divider {
+  width: 50px;
+  height: 3px;
+  background: #15549a;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
+
+#testimonials .quote {
+  position: relative;
+  background: #fff;
+  padding: 60px;
+  margin-top: 40px;
+  font-size: 16px;
+  font-style: italic;
+  border-radius: 5px;
+}
+
+#testimonials .quote b {
+  display: inline-block;
+  font-size: 22px;
+  left: -9px;
+  position: relative;
+  top: -8px;
+}
+
+#testimonials .quote small {
+  display: inline-block;
+  right: -9px;
+  position: relative;
+  top: 4px;
 }
 
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
+
 .contact .info {
   width: 100%;
   background: #fff;
@@ -691,7 +950,7 @@ section {
 
 .contact .info i {
   font-size: 20px;
-  color: #f58220;
+  color: #15549a;
   float: left;
   width: 44px;
   height: 44px;
@@ -718,25 +977,28 @@ section {
   color: #816a6e;
 }
 
-.contact .info .email, .contact .info .phone {
+.contact .info .email,
+.contact .info .phone {
   margin-top: 40px;
 }
 
-.contact .info .email:hover i, .contact .info .address:hover i, .contact .info .phone:hover i {
-  background: #f58220;
+.contact .info .email:hover i,
+.contact .info .address:hover i,
+.contact .info .phone:hover i {
+  background: #15549a;
   color: #fff;
 }
 
-.contact .php-email-form {
+.contact {
   width: 100%;
   background: #fff;
 }
 
-.contact .php-email-form .form-group {
+.contact .form-group {
   padding-bottom: 8px;
 }
 
-.contact .php-email-form .validate {
+.contact .validate {
   display: none;
   color: red;
   margin: 0 0 15px 0;
@@ -744,7 +1006,7 @@ section {
   font-size: 13px;
 }
 
-.contact .php-email-form .error-message {
+.contact .error-message {
   display: none;
   color: #fff;
   background: #ed3c0d;
@@ -753,11 +1015,11 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .error-message br + br {
+.contact .error-message br + br {
   margin-top: 25px;
 }
 
-.contact .php-email-form .sent-message {
+.contact .sent-message {
   display: none;
   color: #fff;
   background: #18d26e;
@@ -766,14 +1028,14 @@ section {
   font-weight: 600;
 }
 
-.contact .php-email-form .loading {
+.contact .loading {
   display: none;
   background: #fff;
   text-align: center;
   padding: 15px;
 }
 
-.contact .php-email-form .loading:before {
+.contact .loading:before {
   content: "";
   display: inline-block;
   border-radius: 50%;
@@ -786,26 +1048,28 @@ section {
   animation: animate-loading 1s linear infinite;
 }
 
-.contact .php-email-form input, .contact .php-email-form textarea {
+.contact input,
+.contact textarea {
   border-radius: 0;
   box-shadow: none;
   font-size: 14px;
 }
 
-.contact .php-email-form input:focus, .contact .php-email-form textarea:focus {
-  border-color: #f58220;
+.contact input:focus,
+.contact textarea:focus {
+  border-color: #15549a;
 }
 
-.contact .php-email-form input {
+.contact input {
   height: 44px;
 }
 
-.contact .php-email-form textarea {
+.contact textarea {
   padding: 10px 12px;
 }
 
-.contact .php-email-form button[type="submit"] {
-  background: #f58220;
+.contact button[type="submit"] {
+  background: #15549a;
   border: 0;
   padding: 10px 28px;
   color: #fff;
@@ -813,8 +1077,8 @@ section {
   border-radius: 50px;
 }
 
-.contact .php-email-form button[type="submit"]:hover {
-  background: #c0600c;
+.contact button[type="submit"]:hover {
+  background: #103b6b;
 }
 
 @-webkit-keyframes animate-loading {
@@ -838,6 +1102,7 @@ section {
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
+
 .breadcrumbs {
   padding: 15px 0;
   background: #f6f4f4;
@@ -875,5 +1140,20 @@ section {
   content: "/";
 }
 
+
+@media (max-width: 768px) {
+ .mySlides {
+    height: 250px;
+    line-height: 1;
+  }
+  .text {
+    padding: 6px 0 6px 0;
+  }
+  }
+
+.hide {
+    overflow-x: hidden;
+}
+/* No footer styling */
 
 /* No footer styling */
