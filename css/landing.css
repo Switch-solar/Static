@@ -762,7 +762,7 @@ section {
       rgba(255, 255, 255, 0.9),
       rgba(255, 255, 255, 0.9)
     ),
-    url("../img/social-impact-bg.jpg") fixed center center;
+    url("https://raw.githubusercontent.com/poweredbymagic/Media/master/satellite-aerial-image-Africa-Earth-night-lights-shutterstock-178142615-1068x602.jpg") fixed center center;
   background-size: cover;
   padding: 80px 0 60px 0;
 }
