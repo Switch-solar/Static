@@ -105,6 +105,12 @@ h6 {
 	color: #493c3e;
 }
 
+.site-name {
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-size: 21px;
+}
+
 @media (max-width: 992px) {
 	#header .logo {
 		font-size: 28px;
