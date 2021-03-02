@@ -53,7 +53,7 @@
     max-width: none;
     margin: 0;
     position: absolute;
-    top: 50%;
+    top: 40%;
     -webkit-transform: translateY(-50%);
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
@@ -67,7 +67,7 @@
     max-width: none;
     margin: 0;
     display: block;
-    height: 100vh;
+    height: 10vh;
     max-height: 740px;
     position: relative;
   }

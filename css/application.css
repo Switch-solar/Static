@@ -45,124 +45,22 @@ h6 {
   letter-spacing: 1px;
 }
 
+h4.med {
+  font-size: 1.6rem;
+}
+
 p {
   font-size: 17px;
   line-height: 1.5;
   margin-bottom: 20px;
 }
 
-/*** Navbar ***/
-
-.navbar {
-  min-height: 80px;
-}
-
-.navbar-default {
-  background-color: #15549a;
-  border-color: rgba(21, 84, 154, 0.1);
-  opacity: 1;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s;
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  letter-spacing: 1px;
-}
-
-.navbar-default .navbar-header .navbar-brand {
-  font-family: "Poppins", sans-serif;
-  font-weight: 200;
-  letter-spacing: 1px;
-  color: #fdcc52;
-  padding: 8px 15px 15px 15px;
-}
-
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
-  color: #fcbd20;
-}
-
-.navbar-default .navbar-header .navbar-toggle {
-  font-size: 12px;
-  color: #222222;
-  padding: 8px 10px;
-}
-
-.navbar-nav {
-  margin-top: 17px;
-}
-
-.social_link .navbar-nav {
-  margin-right: 0;
-}
-
-.navbar-default .nav > li > a {
-  font-size: 20px;
-  padding: 10px 11px;
-  border: 1px solid #fff;
-  margin-right: 5px;
-  border-radius: 4px;
-  background: #15549a;
-  font-weight: 500;
-}
-
-.navbar-default .nav > li:last-child > a {
-  margin-right: 0;
-}
-
-.navbar-default .nav > li > a,
-.navbar-default .nav > li > a:focus {
-  color: #fff;
-}
-
-.navbar-default .nav > li > a:hover,
-.navbar-default .nav > li > a:focus:hover {
-  color: #fdcc52;
-}
-
-.navbar-default .nav > li.active > a,
-.navbar-default .nav > li.active > a:focus {
-  color: #fdcc52 !important;
-  background-color: transparent;
-}
-
-.navbar-default .nav > li.active > a:hover,
-.navbar-default .nav > li.active > a:focus:hover {
-  background-color: transparent;
-}
-
-.navbar-default.has-menu .navbar-header .navbar-toggle {
-  padding: 12px;
-  margin-top: 20px;
-  margin-right: 0;
-}
-
-.navbar-default.has-menu .navbar-header .navbar-toggle:hover,
-.navbar-default.has-menu .navbar-header .navbar-toggle:focus {
-  background-color: #fff;
-  border-color: #fff;
-}
-.navbar-default.has-menu .navbar-header .navbar-toggle:hover .icon-bar,
-.navbar-default.has-menu .navbar-header .navbar-toggle:focus .icon-bar {
-  background-color: #15549a;
-}
-
-.navbar-default.has-menu .navbar-toggle .icon-bar {
-  background-color: #fff;
-}
-
-.navbar-default.has-menu .nav > li > a {
-  border: none;
-  font-size: 16px;
-}
-
 /*** Header ***/
 
 header {
-  position: relative;
+  position: relative !important;
   width: 100%;
-  min-height: auto;
-  /* overflow-y: hidden; */
+  min-height: auto !important;
   background-attachment: fixed;
   background-clip: border-box, border-box;
   background-color: rgba(0, 0, 0, 0);
@@ -174,11 +72,58 @@ header {
   -moz-background-size: cover;
   -webkit-background-size: cover;
   color: #fff;
-  min-height: 740px;
 }
 
-span.form-check {
-  color: #999;
+header.light_bulb {
+  background-image: linear-gradient(
+      rgba(21, 84, 154, 0.4),
+      rgba(21, 84, 154, 0.4)
+    ),
+    url("https://raw.githubusercontent.com/poweredbymagic/Media/master/electric-bulb-inverse.jpg");
+  background-image: -webkit-linear-gradient(
+      rgba(21, 84, 154, 0.4),
+      rgba(21, 84, 154, 0.4)
+    ),
+    url("https://raw.githubusercontent.com/poweredbymagic/Media/master/electric-bulb-inverse.jpg");
+  background-image: -moz-linear-gradient(
+      rgba(21, 84, 154, 0.4),
+      rgba(21, 84, 154, 0.4)
+    ),
+    url("https://raw.githubusercontent.com/poweredbymagic/Media/master/electric-bulb-inverse.jpg");
+  background-image: -ms-linear-gradient(
+      rgba(21, 84, 154, 0.4),
+      rgba(21, 84, 154, 0.4)
+    ),
+    url("https://raw.githubusercontent.com/poweredbymagic/Media/master/electric-bulb-inverse.jpg");
+  background-image: -o-linear-gradient(
+      rgba(21, 84, 154, 0.4),
+      rgba(21, 84, 154, 0.4)
+    ),
+    url("https://raw.githubusercontent.com/poweredbymagic/Media/master/electric-bulb-inverse.jpg");
+}
+
+
+form {
+  color: red;
+  font-size: 14px;
+}
+
+select {
+  color: #666;
+  margin-top: 10px;
+}
+
+label {
+  font-weight: 400;
+  }
+
+.form-check {
+  color: #6c757d;
+  font-size: 16px;
+}
+
+.form-check-label {
+  padding-left:25px !important;
 }
 
 .form-mockup {
@@ -212,7 +157,7 @@ span.form-check {
 }
 
 .form-mockup form {
-  margin-top: 25px;
+  margin-top: 15px;
 }
 
 .form-mockup .form-group .form-control {
