@@ -417,7 +417,7 @@ a.active {
 	width: 100%;
 	height: 100vh;
 	position: relative;
-	background: url("./homeRoof.jpeg") top center;
+	background: url("https://res.cloudinary.com/christwin/image/upload/v1623968358/Switch%28media%29/homeRoof_tmzqrl.jpg") top center;
 	background-size: cover;
   background-attachment: fixed;
 }
