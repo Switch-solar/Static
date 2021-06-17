@@ -135,7 +135,3 @@
     });
 
 })(jQuery);
-
-document.getElementById('send').addEventListener("click", (e) => {
-    e.preventDefault();
-});
