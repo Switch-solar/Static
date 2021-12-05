@@ -13,14 +13,14 @@
         '<form class="forms-sample">' +
         '<div class="form-group">' +
         "<tbody>" +
-        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://paystack.com/pay/scn-g9kka9">1,0000</a></td>' +
-        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://paystack.com/pay/scn-g9kka9">3,000</a></td>' +
-        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://paystack.com/pay/scn-g9kka9">5,000</a></td>' +
+        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://whyNotSwitch.com/top-up/1000/">1,0000</a></td>' +
+        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://whyNotSwitch.com/top-up/3000/">3,000</a></td>' +
+        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://whyNotSwitch.com/top-up/5000/">5,000</a></td>' +
         "</tbody>" +
         "</div>" +
         " <tbody>" +
-        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://paystack.com/pay/scn-g9kka9">10,000</a></td>' +
-        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://paystack.com/pay/scn-g9kka9">25,000</a></td>' +
+        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://whyNotSwitch.com/top-up/10000/">10,000</a></td>' +
+        '<td><a type="button" class="btn btn btn-primary btn-rounded btn-fw" href="https://whyNotSwitch.com/top-up/25000/">25,000</a></td>' +
         " </tbody>" +
         "</form>" +
         '<div class="text-center mt-4">' +
