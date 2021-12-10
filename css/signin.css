@@ -3,16 +3,17 @@
 * {
   padding:0;
   margin:0;
-
   box-sizing: border-box;
 }
 
 html,
 body {
-    height: 100%;
-  width: 100%;
   background: #eeeeee;
   font-family: "Montserrat", sans-serif;
+  background-image: url('https://res.cloudinary.com/christwin/image/upload/v1639134755/Switch%28media%29/aerial-shot-klaipeda-city-bird-footage-086725953_prevstill_symayt.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .body {
@@ -91,6 +92,12 @@ header .logo img {
 h1 {
   font-weight: bold;
   margin: 0;
+  font-size: 35px;
+  text-shadow:
+  -0.3px -0.3px 0 #000,
+  0.3px -0.3px 0 #000,
+  -0.3px 0.3px 0 #000,
+  0.3px 0.3px 0 #000;
 }
 
 p {
@@ -101,6 +108,11 @@ p {
 
 span {
   font-size: 12px;
+  text-shadow:
+  -0.3px -0.3px 0 #000,
+  0.3px -0.3px 0 #000,
+  -0.3px 0.3px 0 #000,
+  0.3px 0.3px 0 #000;
 }
 
 button {
@@ -121,7 +133,6 @@ button:active {
 }
 
 form {
-  background-color: #c9211e;
   color: #fff;
   display: flex;
   align-items: center;
@@ -131,6 +142,10 @@ form {
   height: 100%;
   text-align: center;
   border-radius: 10px;
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
 }
 
 input {
@@ -150,7 +165,6 @@ input {
   width: 768px;
   max-width: 80%;
   min-height: 480px;
-  background-color: #c9211e;
 }
 
 .form-container {
