@@ -24,44 +24,33 @@ const demoData = {
 }
 
 const myChart = new Chart(ctx, demoData);
+const meter_id = 1;
+const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
+//const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
 
-$(document).ready(function() {
-    // auto refresh page after 1 second
-    setInterval('fetchData()', 1000);
-});
-
-
-function fetchData() {
-    const Http = new XMLHttpRequest();
-    const meter_id = 165
-    const last_record = 0
-    const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/'
-    const URL = `${http_url_base}/${meter_id}/${last_record}`;
-
-    Http.onreadystatechange = update
-    Http.open("GET", URL);
-    Http.send();
-
-    var data = JSON.parse(Http.responseText);
-    console.log(URL);
+function updater(data) {
     console.log(data);
 
     var demoDataUpdate = demoData.data.datasets[0].data;
     demoDataUpdate.shift();
-    demoDataUpdate.push(data.value);
+    demoDataUpdate.push(data.energy);
 
     demoData.data.datasets[0].data = demoDataUpdate;
-    myChart.update()
+    myChart.update();
 }
 
 (function poll(){
    setTimeout(function(){
-      $.ajax({ url: "server", success: function(data){
-        //Update your dashboard gauge
-        salesGauge.setValue(data.value);
-        //Setup the next poll recursively
-        poll();
-      }, dataType: "json"});
-  }, 30000);
+      $.ajax({
+        type: 'GET',
+        url: http_url_base + meter_id + '/',
+        dataType: "json",
+        success: function(data){
+            updater(data);
+            //Setup the next poll recursively
+            poll();
+            }
+      });
+  }, 1000);
 })();
