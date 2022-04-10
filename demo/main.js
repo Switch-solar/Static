@@ -49,7 +49,9 @@ function updater(data) {
         type: 'GET',
         url: http_url_base + meter_id + '/',
         dataType: "json",
+        data:{q:last_record},
         success: function(data){
+            console.log(data);
             for (const _data of data){
                 updater(_data);
                 last_record = _data.pk
