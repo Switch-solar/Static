@@ -24,7 +24,8 @@ const demoData = {
 }
 
 const myChart = new Chart(ctx, demoData);
-const meter_id = 1;
+const last_record = 14000;
+const meter_id = 165;
 const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
 //const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
@@ -38,7 +39,15 @@ function updater(data) {
 
     demoData.data.datasets[0].data = demoDataUpdate;
     myChart.update();
-}
+};
+
+
+function handler(array){
+    for (const data of array){
+        updater(data);
+    };
+};
+
 
 (function poll(){
    setTimeout(function(){
@@ -46,8 +55,11 @@ function updater(data) {
         type: 'GET',
         url: http_url_base + meter_id + '/',
         dataType: "json",
-        success: function(data){
-            updater(data);
+        success: function(array){
+            for (const data of array){
+                updater(data);
+                last_record = data.pk
+            };
             //Setup the next poll recursively
             poll();
             }
