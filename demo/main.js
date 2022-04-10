@@ -10,7 +10,7 @@ const ctx = document.getElementById('myChart').getContext('2d');
 const graphMaker = {
     type: 'line',
     data: {
-        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'x', 'y', 'z', 'a', 'b', 'c'],
+        labels: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         datasets: [{
             label: '# kWh consumption',
             fill: 'origin',
@@ -34,12 +34,17 @@ var last_record = null;
 function updater(data) {
     console.log(data);
 
-    var graphMakerUpdate = graphMaker.data.datasets[0].data;
-    graphMakerUpdate.shift();
-    graphMakerUpdate.push(data.energy);
-    console.log(data.energy);
+    var dataBuffer = graphMaker.data.datasets[0].data;
+    var labelBuffer = graphMaker.data.labels;
+    dataBuffer.shift();
+    dataBuffer.push(data.energy);
 
-    graphMaker.data.datasets[0].data = graphMakerUpdate;
+    labelBuffer.shift();
+    labelBuffer.push(data.time_recorded);
+
+    graphMaker.data.datasets[0].data = dataBuffer;
+    graphMaker.data.labels = labelBuffer;
+
     myChart.update();
 };
 
@@ -49,12 +54,12 @@ function updater(data) {
       $.ajax({
         type: 'GET',
         url: http_url_base + meter_id + '/',
-        dataType: "json",
+        dataType: 'json',
         data:{q:last_record},
         success: function(array){
             console.log(array);
             for (const data of array){
-                updater(data);
+                setTimeout(() => { updater(data); }, 500);
                 last_record = data.pk
             };
             poll();
