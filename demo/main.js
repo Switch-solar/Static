@@ -7,7 +7,7 @@ if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
 
 const ctx = document.getElementById('myChart').getContext('2d');
 
-const demoData = {
+const graphMaker = {
     type: 'line',
     data: {
         labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange', 'x', 'y', 'z', 'a', 'b', 'c'],
@@ -23,23 +23,23 @@ const demoData = {
     options: {}
 }
 
-const myChart = new Chart(ctx, demoData);
+const myChart = new Chart(ctx, graphMaker);
 const meter_id = 165;
 const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
 //const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
-var last_record = 14000;
+var last_record = null;
 
 
 function updater(data) {
     console.log(data);
 
-    var demoDataUpdate = demoData.data.datasets[0].data;
-    demoDataUpdate.shift();
-    demoDataUpdate.push(data.energy);
+    var graphMakerUpdate = graphMaker.data.datasets[0].data;
+    graphMakerUpdate.shift();
+    graphMakerUpdate.push(data.energy);
     console.log(data.energy);
 
-    demoData.data.datasets[0].data = demoDataUpdate;
+    graphMaker.data.datasets[0].data = graphMakerUpdate;
     myChart.update();
 };
 
@@ -60,5 +60,5 @@ function updater(data) {
             poll();
             }
       });
-  }, 1000);
+  }, 1300);
 })();
