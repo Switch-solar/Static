@@ -59,7 +59,7 @@ function updater(data) {
         success: function(array){
             console.log(array);
             for (const data of array){
-                setTimeout(() => { updater(data); }, 500);
+                setTimeout(() => { updater(data); }, 1000);
                 last_record = data.pk
             };
             poll();
