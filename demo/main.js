@@ -36,16 +36,10 @@ function updater(data) {
     var demoDataUpdate = demoData.data.datasets[0].data;
     demoDataUpdate.shift();
     demoDataUpdate.push(data.energy);
+    console.log(data.energy);
 
     demoData.data.datasets[0].data = demoDataUpdate;
     myChart.update();
-};
-
-
-function handler(array){
-    for (const data of array){
-        updater(data);
-    };
 };
 
 
@@ -55,10 +49,10 @@ function handler(array){
         type: 'GET',
         url: http_url_base + meter_id + '/',
         dataType: "json",
-        success: function(array){
-            for (const data of array){
-                updater(data);
-                last_record = data.pk
+        success: function(data){
+            for (const _data of data){
+                updater(_data);
+                last_record = _data.pk
             };
             //Setup the next poll recursively
             poll();
