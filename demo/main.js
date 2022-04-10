@@ -26,15 +26,29 @@ const demoData = {
 const myChart = new Chart(ctx, demoData);
 
 
-// var socket = new WebSocket('ws://app.whynotswitch.com/ws/demo/');
-var socket = new WebSocket('ws://localhost:8000/ws/demo/');
+$(document).ready(function() {
+    // auto refresh page after 1 second
+    setInterval('fetchData()', 1000);
+});
 
-socket.onmessage = function(e) {
-    var data = JSON.parse(e.data);
+
+function fetchData() {
+    const Http = new XMLHttpRequest();
+    const meter_id = 165
+    const last_record = 0
+    const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/'
+    const URL = `${http_url_base}/${meter_id}/${last_record}`;
+
+    Http.onreadystatechange = update
+    Http.open("GET", URL);
+    Http.send();
+
+    var data = JSON.parse(Http.responseText);
+    console.log(URL);
     console.log(data);
 
     var demoDataUpdate = demoData.data.datasets[0].data;
-    demoDataUpdate.shift(data.value);
+    demoDataUpdate.shift();
     demoDataUpdate.push(data.value);
 
     demoData.data.datasets[0].data = demoDataUpdate;
