@@ -21,7 +21,9 @@ const graphMaker = {
             borderWidth: 2
         }]
     },
-    options: {}
+    options: {
+        responsive: true,
+    }
 }
 
 const myChart = new Chart(ctx, graphMaker);
@@ -41,7 +43,7 @@ function updater(data) {
     dataBuffer.push(data.energy);
 
     labelBuffer.shift();
-    labelBuffer.push(data.time_recorded);
+    labelBuffer.push(data.pk);
 
     graphMaker.data.datasets[0].data = dataBuffer;
     graphMaker.data.labels = labelBuffer;
