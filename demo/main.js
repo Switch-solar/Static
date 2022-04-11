@@ -32,7 +32,25 @@ const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
 //const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
 var last_record = null;
+var dataSet = []
 
+
+function tabulate(data) {
+    var newRow = Object.values(data);
+    dataSet.unshift(newRow);
+    console.log(newRow);
+
+    $('#data').DataTable( {
+        data: dataSet,
+        columns: [
+            { title: "Index" },
+            { title: "Voltage" },
+            { title: "Current" },
+            { title: "Time" },
+            { title: "Epoch" },
+        ]
+    } );
+}
 
 function updater(data) {
     console.log(data);
@@ -64,6 +82,7 @@ function updater(data) {
             for (const data of array){
                 //setTimeout(() => { updater(data); }, 200);
                 updater(data);
+                tabulate(data);
                 last_record = data.pk
             };
             poll();
