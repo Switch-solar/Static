@@ -12,6 +12,7 @@ const graphMaker = {
     data: {
         labels: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         datasets: [{
+            lineTension: 0,
             label: '# kWh consumption',
             fill: 'origin',
             data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
