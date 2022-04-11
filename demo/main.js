@@ -12,7 +12,7 @@ const graphMaker = {
     data: {
         labels: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         datasets: [{
-            lineTension: 0,
+            lineTension: 1,
             label: '# kWh consumption',
             fill: 'origin',
             data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
@@ -67,5 +67,5 @@ function updater(data) {
             poll();
             }
       });
-  }, 1300);
+  }, 1000);
 })();
