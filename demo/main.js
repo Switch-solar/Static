@@ -50,9 +50,11 @@ var table = $('#data').DataTable( {
 
 function tabulate(data) {
     var newRow = Object.values(data);
+    var rowNode = table.row.add(newRow).draw().node();
 
-    table.row.add(newRow).draw();
-    //console.log(newRow);
+    $( rowNode )
+        .css( 'color', 'red' )
+        .animate( { color: 'black' } );
 }
 
 function updater(data) {
