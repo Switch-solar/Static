@@ -13,7 +13,7 @@ const graphMaker = {
         labels: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
         datasets: [{
             tension: 0.4,
-            label: '# kWh consumption',
+            label: '#Electrical Power -> kW',
             fill: 'origin',
             data: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
             backgroundColor: ['rgba(54, 162, 235, 0.2)',],
@@ -27,38 +27,40 @@ const graphMaker = {
 }
 
 const myChart = new Chart(ctx, graphMaker);
-const meter_id = 165;
+const meter_id = 149;
 const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
 //const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
 var last_record = null;
-var dataSet = []
+
+
+var table = $('#data').DataTable( {
+    order: [[0, "desc" ]]
+    data: [],
+    columns: [
+        { title: "Index" },
+        { title: "Voltage" },
+        { title: "Current" },
+        { title: "Time" },
+        { title: "Epoch" },
+    ]
+} );
 
 
 function tabulate(data) {
     var newRow = Object.values(data);
-    dataSet.unshift(newRow);
-    console.log(newRow);
 
-    $('#data').DataTable( {
-        data: dataSet,
-        columns: [
-            { title: "Index" },
-            { title: "Voltage" },
-            { title: "Current" },
-            { title: "Time" },
-            { title: "Epoch" },
-        ]
-    } );
+    table.row.add(newRow).draw();
+    console.log(newRow);
 }
 
 function updater(data) {
-    console.log(data);
-
     var dataBuffer = graphMaker.data.datasets[0].data;
     var labelBuffer = graphMaker.data.labels;
+    var power = (data.avg_voltage * data.avg_current) / 1000
+
     dataBuffer.shift();
-    dataBuffer.push(data.energy);
+    dataBuffer.push(power);
 
     labelBuffer.shift();
     labelBuffer.push(data.pk);
