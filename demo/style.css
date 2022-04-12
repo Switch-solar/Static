@@ -227,3 +227,9 @@ dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
 .dataTables_wrapper .dataTables_paginate .paginate_button{
     color: #eee !important;
 }
+
+#title {
+    color: #fff;
+    padding-top: 3%;
+    padding-bottom: 1%;
+}

@@ -35,6 +35,7 @@ var last_record = null;
 
 
 var table = $('#data').DataTable( {
+    responsive: true,
     order: [[0, "desc" ]],
     data: [],
     columns: [
