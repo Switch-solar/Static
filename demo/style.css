@@ -213,3 +213,17 @@ body {
 .dataTables_wrapper .dataTables_paginate {
 	color: #909ca0 !important;
 }
+
+.dataTables_wrapper .dataTables_filter input select {
+    color: #fff;
+}
+
+dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:hover,
+.dataTables_wrapper .dataTables_paginate .paginate_button.disabled:active{
+    color: #eee !important;
+}
+
+.dataTables_wrapper .dataTables_paginate .paginate_button{
+    color: #eee !important;
+}

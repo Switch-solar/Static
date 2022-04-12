@@ -51,7 +51,7 @@ function tabulate(data) {
     var newRow = Object.values(data);
 
     table.row.add(newRow).draw();
-    console.log(newRow);
+    //console.log(newRow);
 }
 
 function updater(data) {
@@ -80,7 +80,7 @@ function updater(data) {
         dataType: 'json',
         data:{q:last_record},
         success: function(array){
-            console.log(array);
+            //console.log(array);
             for (const data of array){
                 //setTimeout(() => { updater(data); }, 200);
                 updater(data);
