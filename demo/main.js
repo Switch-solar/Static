@@ -41,8 +41,8 @@ var table = $('#data').DataTable( {
         { title: "Index" },
         { title: "Voltage" },
         { title: "Current" },
+        { title: "Energy" },
         { title: "Time" },
-        { title: "Epoch" },
     ]
 } );
 
