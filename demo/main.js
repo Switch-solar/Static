@@ -27,9 +27,9 @@ const graphMaker = {
 }
 
 const myChart = new Chart(ctx, graphMaker);
-const meter_id = 149;
-const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
-//const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
+const meter_id = 1;
+//const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
+const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
 var last_record = null;
 
