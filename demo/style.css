@@ -4,11 +4,11 @@
 
   --theadColor: #000;
 
-  --theadTextColor: #fff;
+  --theadTextColor: #9ba8ab;
 
   --darkColor:#000;
 
-  --lightColor:#fff;
+  --lightColor:#9ba8ab;
 
   --darkRowColor: #1b1d1b;
 
@@ -120,7 +120,7 @@ body {
 
         content: "\f0dc";
 
-        color: #ddd;
+        color: #9ba8ab;
 
         font-size: 0.8em;
 
@@ -148,7 +148,7 @@ body {
 
         background-color: var(--darkColor) !important;
 
-        color: #fff;
+        color: #9ba8ab;
 
       }
 
@@ -188,7 +188,7 @@ body {
 
              background-color: var(--theadColor) !important;
 
-         color:#fff !important
+         color:#9ba8ab !important
 
 }
 
@@ -204,18 +204,18 @@ body {
 
    background-color: #000 !important;
 
-   color: #fff !important;
+   color: #9ba8ab !important;
 
 }
 
 .dataTables_wrapper .dataTables_length, .dataTables_wrapper .dataTables_filter,
 .dataTables_wrapper .dataTables_info, .dataTables_wrapper .dataTables_processing,
 .dataTables_wrapper .dataTables_paginate {
-	color: #909ca0 !important;
+	color: #9ba8ab !important;
 }
 
 .dataTables_wrapper .dataTables_filter input select {
-    color: #fff;
+    color: #9ba8ab;
 }
 
 dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
@@ -229,7 +229,7 @@ dataTables_wrapper .dataTables_paginate .paginate_button.disabled,
 }
 
 #title {
-    color: #fff;
+    color: #ddd;
     padding-top: 3%;
     padding-bottom: 1%;
 }
