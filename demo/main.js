@@ -53,7 +53,7 @@ function tabulate(data) {
     var rowNode = table.row.add(newRow).draw().node();
 
     $( rowNode )
-        .css().animate({color: #fff});
+        .css('color', '#9ba8ab').animate({color: 'white'});
 }
 
 function updater(data) {
