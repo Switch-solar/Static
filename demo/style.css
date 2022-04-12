@@ -2,15 +2,15 @@
 
 :root {
 
-  --theadColor: #000;
+  --theadColor: #1c212a;
 
   --theadTextColor: #9ba8ab;
 
-  --darkColor:#000;
+  --darkColor:#1c212a;
 
   --lightColor:#9ba8ab;
 
-  --darkRowColor: #1b1d1b;
+  --darkRowColor: #22272e;
 
 }
 
@@ -22,7 +22,7 @@ body {
 
       table.dataTable {
 
-       border:1px solid #000;
+       border:1px solid #22272e;
 
        background-color: #000;
 
@@ -32,7 +32,7 @@ body {
 
       {
 
-        border-color: #000 !important;
+        border-color: #22272e !important;
 
       }
 
@@ -43,6 +43,10 @@ body {
         
 
       }
+
+    table.dataTable.no-footer {
+        border-bottom: 1px solid #22272e;
+    }
 
       thead > tr,
 
@@ -62,7 +66,7 @@ body {
 
       table.dataTable thead td {
 
-        border-bottom: 0px solid #111 !important;
+        border-bottom: 0px solid #31363c !important;
 
       }
 
