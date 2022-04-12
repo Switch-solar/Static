@@ -32,7 +32,7 @@ body {
 
       {
 
-        border-color: #22272e !important;
+        border-color: #3d4248 !important;
 
       }
 
@@ -45,7 +45,7 @@ body {
       }
 
     table.dataTable.no-footer {
-        border-bottom: 1px solid #22272e;
+        border-bottom: 1px solid #3d4248;
     }
 
       thead > tr,
