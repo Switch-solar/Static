@@ -27,7 +27,7 @@ const graphMaker = {
 }
 
 const myChart = new Chart(ctx, graphMaker);
-const meter_id = 149;
+const meter_id = 165;
 const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
 //const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
 
@@ -53,8 +53,7 @@ function tabulate(data) {
     var rowNode = table.row.add(newRow).draw().node();
 
     $( rowNode )
-        .css( 'color', 'red' )
-        .animate( { color: 'black' } );
+        .animate({color: #fff});
 }
 
 function updater(data) {
