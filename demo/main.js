@@ -1,9 +1,7 @@
-if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-  Chart.defaults.color = "#ADBABD";
-  Chart.defaults.borderColor = "rgba(255,255,255,0.1)";
-  Chart.defaults.backgroundColor = "rgba(255,255,0,0.1)";
-  Chart.defaults.elements.line.borderColor = "rgba(255,255,0,0.4)";
-}
+Chart.defaults.color = "#ADBABD";
+Chart.defaults.borderColor = "rgba(255,255,255,0.1)";
+Chart.defaults.backgroundColor = "rgba(255,255,0,0.1)";
+Chart.defaults.elements.line.borderColor = "rgba(255,255,0,0.4)";
 
 const ctx = document.getElementById('myChart').getContext('2d');
 
