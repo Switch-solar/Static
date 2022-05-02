@@ -26,12 +26,15 @@ const graphMaker = {
     }
 }
 
-const myChart = new Chart(ctx, graphMaker);
-const meter_id = 165;
-const http_url_base = 'http://app.whynotswitch.com/api/demo/meter/';
-//const http_url_base = 'http://127.0.0.1:8000/api/demo/meter/';
-
+var interval = 1000;
 var last_record = null;
+//const http_url_base = 'http://127.0.0.1:8000/api/realtime/meter/';
+const http_url_base = 'http://0.whynotswitch.com/api/realtime/meter/';
+const queryString = window.location.search;
+const urlParams = new URLSearchParams(queryString);
+const myChart = new Chart(ctx, graphMaker);
+const meter_id = urlParams.get('meter');
+
 
 
 var table = $('#data').DataTable( {
@@ -84,13 +87,14 @@ function updater(data) {
         success: function(array){
             //console.log(array);
             for (const data of array){
-                //setTimeout(() => { updater(data); }, 200);
                 updater(data);
                 tabulate(data);
-                last_record = data.pk
+                last_record = data.pk;
+                // convert interval to milliseconds and update
+                interval = data.interval * 1000;
             };
             poll();
             }
       });
-  }, 1000);
+  }, interval);
 })();
